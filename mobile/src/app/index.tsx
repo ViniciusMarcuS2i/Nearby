@@ -1,6 +1,6 @@
 import Steps from "@/components/steps";
 import Welcome from "@/components/welcome";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 function Home() {
   return (
