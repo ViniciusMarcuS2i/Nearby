@@ -12,8 +12,8 @@ interface StepProps {
 function Step({ description, title, icon: Icon }: StepProps) {
   return (
     <View style={styles.container}>
+      <Icon size={32} color={colors.red.base} />
       <View style={styles.details}>
-        <Icon size={32} color={colors.red.base} />
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
       </View>
