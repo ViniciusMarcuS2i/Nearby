@@ -28,7 +28,9 @@ function Place({ data, ...rest }: Props) {
       <Image style={styles.image} source={{ uri: data.cover }} />
       <View style={styles.content}>
         <Text style={styles.name}>{data.name}</Text>
-        <Text style={styles.description}>{data.description}</Text>
+        <Text numberOfLines={2} style={styles.description}>
+          {data.description}
+        </Text>
         <View style={styles.footer}>
           <IconTicket size={16} color={colors.red.base} />
           <Text style={styles.tickets}>{data.cupons} cupons disponíveis</Text>
