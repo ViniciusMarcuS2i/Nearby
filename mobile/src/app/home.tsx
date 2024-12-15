@@ -8,6 +8,7 @@ import MapView, { Callout, Marker } from "react-native-maps";
 import * as Location from "expo-location";
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/font-family";
+import { router } from "expo-router";
 
 type MarkekProps = PlaceProps & {
   latitude: number;
@@ -98,7 +99,9 @@ function Home() {
               latitude: market.latitude,
             }}
           >
-            <Callout>
+            <Callout
+              onPress={() => router.navigate(`/market/${market.id}` as never)}
+            >
               <View>
                 <Text
                   style={{
